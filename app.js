@@ -17,6 +17,7 @@ app.get('/api', (req, res) => {
   res.json({ message: 'Welcome to vietedu!' });
 });
 require('./src/routes/userRouter.js')(app);
+require('./src/routes/loginRouter.js')(app);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.`);
 });
