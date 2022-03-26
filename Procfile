@@ -1,1 +1,1 @@
-web: node app.js
+web: node --es-module-specifier-resolution=node app.js
