@@ -1,8 +1,7 @@
-module.exports = (app) => {
-  const route = require('../controllers/loginController.js');
-  var router = require('express').Router();
+import { userLogin } from '../controllers/loginController.js';
+import { Router } from 'express';
+const router = Router();
 
-  router.post('/login', route.login);
+router.post('/login', userLogin);
 
-  app.use('/api', router);
-};
+export default router;

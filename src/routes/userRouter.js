@@ -1,12 +1,11 @@
-module.exports = (app) => {
-  const route = require('../controllers/userController.js');
-  var router = require('express').Router();
+import { getAllUser, createUser, findUserById, updateUserById, removeUser } from '../controllers/userController.js';
+import { Router } from 'express';
+const router = Router();
 
-  router.get('/', route.findAll);
-  router.post('/', route.create);
-  router.get('/:id', route.findOne);
-  router.put('/:id', route.update);
-  router.delete('/:id', route.delete);
+router.get('/', getAllUser);
+router.post('/', createUser);
+router.get('/:id', findUserById);
+router.put('/:id', updateUserById);
+router.delete('/:id', removeUser);
 
-  app.use('/api/user', router);
-};
+export default router;

@@ -1,12 +1,12 @@
-const mysql = require('mysql');
-const dbConfig = require('../config/db.config.js');
+import { createConnection } from 'mysql';
+import { HOST, USER, PASSWORD, DB, PORT } from '../config/db.config.js';
 
-var connection = mysql.createConnection({
-  host: dbConfig.HOST,
-  user: dbConfig.USER,
-  password: dbConfig.PASSWORD,
-  database: dbConfig.DB,
-  port: dbConfig.PORT,
+var connection = createConnection({
+  host: HOST,
+  user: USER,
+  password: PASSWORD,
+  database: DB,
+  port: PORT,
 });
 
 connection.connect(function (err) {
@@ -14,4 +14,4 @@ connection.connect(function (err) {
   console.log('Connected!!!');
 });
 
-module.exports = connection;
+export default connection;

@@ -1,9 +1,6 @@
-module.exports = {
-  HOST: 'sql6.freemysqlhosting.net',
-  USER: 'sql6481533',
-  PASSWORD: 'NuNL8NXBbP',
-  DB: 'sql6481533',
-  PORT: '3306',
-  // can't change this const
-  PASSWORD_DUMMY_STRING: 'DAUKIET',
-};
+export const HOST = 'localhost';
+export const USER = 'root';
+export const PASSWORD = '';
+export const DB = 'vieteduapi';
+export const PORT = '';
+export const PASSWORD_DUMMY_STRING = 'DAUKIET';
